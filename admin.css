@@ -1,0 +1,97 @@
+/* admin.css */
+.s3-status-indicator .ab-icon {
+    margin-right: 4px;
+}
+
+.s3-status-indicator:hover .ab-icon {
+    opacity: 0.8;
+}
+
+#s3-connection-status-msg.success {
+    color: #46b450;
+}
+
+#s3-connection-status-msg.error {
+    color: #dc3232;
+}
+
+/* 媒体库存储位置列样式 */
+.column-storage_location {
+    width: 120px;
+}
+
+.column-storage_location .dashicons {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* 设置页面样式 */
+.s3-media-settings-wrap {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin-top: 15px;
+}
+
+.s3-media-settings-wrap h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.s3-media-settings-wrap .form-table th {
+    padding-left: 0;
+}
+
+.s3-media-settings-wrap .description {
+    font-style: italic;
+    color: #666;
+}
+
+/* 连接状态指示器 */
+.s3-connection-status {
+    padding: 10px;
+    margin: 15px 0;
+    border-left: 4px solid #ccc;
+    background: #f9f9f9;
+}
+
+.s3-connection-status.connected {
+    border-left-color: #46b450;
+    background: #f7fff9;
+}
+
+.s3-connection-status.disconnected {
+    border-left-color: #dc3232;
+    background: #fff7f7;
+}
+
+.s3-connection-status .dashicons {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* 模式说明 */
+.s3-mode-description {
+    background: #f0f0f1;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.s3-mode-description h3 {
+    margin-top: 0;
+}
+
+.s3-mode-description ul {
+    margin-bottom: 0;
+}
+
+.s3-mode-description li {
+    margin-bottom: 8px;
+}
+
+.s3-mode-description li:last-child {
+    margin-bottom: 0;
+}
