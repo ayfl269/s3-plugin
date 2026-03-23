@@ -164,11 +164,11 @@ class Media_Handler {
     }
 
     private function is_image($path) {
-        return in_array(wp_check_filetype($path)['type'], ['image/jpeg', 'image/png', 'image/gif', 'image/webp']);
+        return in_array(wp_check_filetype($path)['type'], ['image/jpeg', 'image/png', 'image/webp']);
     }
 
     private function convert_to_webp($file_path) {
-        $webp_path = preg_replace('/\.(jpe?g|png|gif)$/i', '.webp', $file_path);
+        $webp_path = preg_replace('/\.(jpe?g|png)$/i', '.webp', $file_path);
         $editor = wp_get_image_editor($file_path);
         if (!is_wp_error($editor)) {
             $result = $editor->save($webp_path, 'image/webp');
