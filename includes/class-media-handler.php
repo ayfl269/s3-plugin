@@ -48,10 +48,12 @@ class Media_Handler {
     public function handle_original_upload($upload) {
         $options = get_option('s3_image_conversion_options');
         if (!empty($options['convert_to_webp']) && $this->is_image($upload['file'])) {
-            $webp_path = $this->convert_to_webp($upload['file']);
+            $old_file = $upload['file'];
+            $webp_path = $this->convert_to_webp($old_file);
             if ($webp_path) {
                 $upload['file'] = $webp_path;
-                $upload['url'] = str_replace(basename($upload['file']), basename($webp_path), $upload['url']);
+                $upload['url'] = str_replace(basename($old_file), basename($webp_path), $upload['url']);
+                $upload['type'] = 'image/webp';
             }
         }
         return $upload;
